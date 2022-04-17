@@ -1,1 +1,9 @@
-<p>user-account works!</p>
+<div *ngIf="userAccount">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{userAccount.name}} <small>({{userAccount.login}})</small>
+      <span * ngIf="userAccount.company">,Works at {{userAccount.company}}</span>
+      {{userAccount.location}}
+    </div>
+  </div>
+</div>

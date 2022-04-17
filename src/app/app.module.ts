@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/common/http';
+
+import { UserAccountService } from './services/user-account.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,13 +11,14 @@ import { UserAccountComponent } from './components/user-account/user-account.com
 @NgModule({
   declarations: [
     AppComponent,
-    UserAccountComponent
+    UserAccountComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [UserAccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
