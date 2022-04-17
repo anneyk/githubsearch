@@ -18,6 +18,24 @@
             <li class="list-group-item" *ngIf="userAccount.email"><a href="emailto: {{userAccount.email}}" target="_blank">{{userAccount.email}}</a></li>
           </ul>
         </div>
+        <div class="col-sm-4">
+          <div>
+            <p>
+              <span class="label label-default">
+                {{userAccount.followers}} Followers
+              </span>
+              <span class="label label-default">Following
+                {{userAccount.following}} Followers
+              </span>
+              <span class="label label-default">
+                {{userAccount.public_gists}} Public gists
+              </span>
+              <span class="label label-default">
+                {{userAccount.public_repos}} Public repos
+              </span>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
