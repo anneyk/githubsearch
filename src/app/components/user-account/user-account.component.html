@@ -10,7 +10,14 @@
         <div class="col-sm-3">
           <img src="{{userAccount.avatar_url}}" class="img-circle img-reponsive" alt="userAccount image">
         </div>
-    
+        <div class="col-sm-3">
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="userAccount.bio">{{userAccount.bio}}</li>
+            <li class="list-group-item" *ngIf="userAccount.hireable">Available for hire</li>
+            <li class="list-group-item" *ngIf="userAccount.blog">{{userAccount.blog}}</li>
+            <li class="list-group-item" *ngIf="userAccount.email">{{userAccount.email}}</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
