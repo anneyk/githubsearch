@@ -1,24 +1,26 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
-import { UserAccountService } from './services/user-account.service';
 
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
+import { ProfileService } from './services/profile.service';
+
 import { AppComponent } from './app.component';
-import { UserAccountComponent } from './components/user-account/user-account.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserAccountComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [UserAccountService],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
