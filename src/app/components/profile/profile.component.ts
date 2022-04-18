@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../../services/profile.service';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'gg-profile',
+  selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  profile!: any[];
+  profile!:any[];
   repos!: any[];
-  username!: string;
+  username!:string;
 
   constructor(private profileService: ProfileService) { 
 
@@ -21,7 +19,7 @@ export class ProfileComponent implements OnInit {
   	this.profileService.updateProfile(this.username);
   	this.profileService.getProfileInfo().subscribe((profile: any[]) => {
   		console.log(profile);
-  		this.profile = profile;
+  		this.profile= profile;
   	});
 
   	this.profileService.getProfileRepos().subscribe((repos: any[]) => {
