@@ -1,6 +1,6 @@
 <form action="" class="search-form">
 	<div class="form-group">
-		<input type="text" class="form-control" placeholder="Search github users with username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
+		<input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
 	</div>
 </form>
 <div *ngIf="profile">
@@ -26,10 +26,10 @@
 				<div class="col-sm-4">
 					<div>
 						<p>
-							<button><span class="label label-default">{{ profile.followers }} Followers</span></button>
-							<button><span class="label label-primary">Following {{ profile.following }}</span></button>
-							<button><span class="label label-success">{{ profile.public_gists }} Public gists</span></button>
-							<button><span class="label label-info">{{ profile.public_repos }} Public Repos</span></button>
+							<span class="label label-default">{{profile.followers}} Followers</span>
+							<span class="label label-primary">Following {{profile.following}}</span>
+							<span class="label label-success">{{profile.public_gists}} Public gists</span>
+							<span class="label label-info">{{profile.public_repos}} Public Repos</span>
 						</p>
 						<p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a></p>
 						<div class="panel panel-default">
